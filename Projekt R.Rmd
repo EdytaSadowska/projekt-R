@@ -10,8 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 #instalowanie pakietów do łączenia plików
-install.packages("dplyr")
-install.packages("readr")
 library(dplyr)
 library(readr)
 #pakiety do wizualizacji braków danych i czyszczenia
@@ -21,7 +19,7 @@ library(tidyverse)
 
 ```{r}
 #Wczytanie plików
-otomoto_plik <- read.csv("C:/Users/edyta/OneDrive/Pulpit/studia/sem 1 magisterka/Klon/projekt-R/cleaned_combined_raw_results_full.csv", header=TRUE, sep=",", quote="\"", dec=".", fill=TRUE, comment.char="")
+otomoto_plik <- read.csv("cleaned_combined_raw_results_full.csv", header=TRUE, sep=",", quote="\"", dec=".", fill=TRUE, comment.char="")
 locations <- read_delim("locations.csv", 
     delim = "|", escape_double = FALSE, trim_ws = TRUE)
 
