@@ -14,6 +14,9 @@ install.packages("dplyr")
 install.packages("readr")
 library(dplyr)
 library(readr)
+#pakiety do wizualizacji braków danych i czyszczenia
+library(naniar)
+library(tidyverse)
 ```
 
 ```{r}
@@ -38,5 +41,27 @@ dane_polaczone <- otomoto_plik %>%
 ```{r}
 #Zapis gotowego pliku
 write_csv(dane_polaczone, "otomoto_ze_wspolrzednymi.csv")
+```
+
+#1. Wprowadzenie
+
+##1.1. Cele projektu
+
+#2. Dane
+
+```{r}
+##Braki
+dane_polaczone %>%
+  select(1:20) %>%
+  vis_miss(warn_large_data = FALSE)
+dane_polaczone %>%
+select(20:42) %>%
+  vis_miss(warn_large_data = FALSE)
+```
+#tu bedzie komentarz...
+
+
+```{r}
+gg_miss_upset(dane_polaczone)
 ```
 
