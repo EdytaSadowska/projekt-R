@@ -63,3 +63,17 @@ select(20:42) %>%
 gg_miss_upset(dane_polaczone)
 ```
 
+
+
+```{r}
+#zależności między brakami danych a zmiennymi kategorycznymi
+
+gg_miss_fct(dane_polaczone, fct=Rodzaj.paliwa)
+```
+
+
+
+```{r}
+
+```
+
